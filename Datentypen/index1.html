@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Konsole</title>
+    <script>
+        //Befehle in Konsole -> mit "Untersuchen" öffnen
+        var meldung = "Hallo Konsole!";
+        console.log(meldung);
+        var myVariable = "hallo"; 
+
+        //Kann dynamisch Datentypen ändern -> nicht so streng wie java oder c#
+let local = 32;
+
+{
+  let local = 64;
+  console.log(local); //64
+}
+
+console.log(local); //32
+
+// egal ob '*' oder "*"
+var s1 = 'Wer ist der nächste?'; //mit einfachen Anführungszeichen 
+var s2 = "Who's next?";          //mit doppelten Anführungszeichen 
+
+// if else 
+var alter = 13
+if (alter < 16) {
+    document.write("<strong>Sie fahren zum halben Preis.</strong>")
+}
+else if (alter < 65) { 
+    document.write("<strong>Sie fahren zum vollen Preis.</strong>")
+}
+else {
+    document.write("<strong>Sie fahren zum halben Preis.</strong>")
+}
+
+//while loop
+var n = 1;
+while (n<=10){
+    console.log(n);
+    n++; //ohne n++ gibt es eine endlos Schleife
+}
+
+//do loop
+var n = 1;
+do {
+    console.log(n);
+    n++;
+} while (n<=10)
+
+//for loop
+for(var i = 1; i <=10; i++){
+    console.log(i);
+}
+
+//Schleife mit break
+n = 0;
+while(true){
+    n++;
+    console.log(n);
+    if(n==10){
+        break
+    }
+}
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>
