@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        //längere Version für Array
+    var farben = new Array();
+farben[0] = "rot";
+farben[1] = "grün";
+farben[2] = "blau";
+alert(farben[1]); //grün
+
+//schnellere Version für Array
+var farben = new Array("rot", "grün", "blau");
+alert(farben[0]); //rot
+
+//mit "new" wird das array neu gemacht
+var farben = new Array("rot", "grün", "blau");
+alert(farben[0]);//rot
+
+//ultimative Kurzform -> "new array" mit eckigen klammern ersetzen
+var farben = ["rot", "grün", "blau"]
+alert (farben[2]);//blau
+
+//Arrays aber erweitert
+//lengt gibt länge des Arrays zurück
+var farben = ["rot", "grün", "blau"];
+alert(farben.length); //antowrt ist 3
+
+//mit push werden neue elemente an Arrays angehängt
+
+var farben = ["rot", "grün", "blau"];
+farben.push("gelb", "grau", "weiss", "schwarz");
+alert(farben[5]);
+
+//mit splice können neue elemente mitten im array eingefügt werden
+var farben = ["rot", "grün", "blau"];
+farben.splice(1, 0, "gelb");
+alert(farben[1]); //gelb
+alert(farben[2]); //grün    
+
+//Elemente Entfernen
+var farben = ["rot", "grün", "blau", "gelb"];
+faben.splice(1, 2);
+alert(farben[1]); //grün und blau wurden entfernt
+</script>
+</body>
+</html>
