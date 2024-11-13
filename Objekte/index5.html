@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript-Beispiel</title>
+</head>
+<body>
+    <script>
+        //länge eines Strings abfragen
+      var myString = "Hallo Welt!"; 
+      alert(myString.length); //11 
+
+      //da wo 6 beginnt fängt es an zu zählen, also ab W und bei t hört es auf... ! zählt nicht
+      var myString = "Hallo Welt!"; 
+var teil = myString.substring(6, 10);
+alert(teil); //"Welt" 
+
+//eigene Objekte
+var auto = {}; //Geschweifte Klammern auf und zu und voilà: das Objekt existiert!
+auto.marke = "BMW"; //Ab dem Moment, wo eine Eigenschaft gesetzt wird, existiert sie.
+auto.farbe = "schwarz";
+alert("Mein " + auto.marke + " ist " + auto.farbe);//"Mein BMW ist schwarz"
+
+var auto = {};
+auto.besitzer = {};
+auto.besitzer.vorname = "Hans"; //Unterkategorie machen
+auto.besitzer.nachname = "Muster";
+
+//JSON
+var firma = {}; //Objekt
+ firma.firmenname = "Credit Suisse";
+ firma.angestellte = []; 
+ firma.angestellte[0] = {};
+ firma.angestellte[0].vorname = "John";
+ firma.angestellte[0].nachname = "Doe";
+ firma.angestellte[1] = {};
+ firma.angestellte[1].vorname = "Anna";
+ firma.angestellte[1].nachname = "Smith";
+ firma.angestellte[3] = {};
+ firma.angestellte[3].vorname = "Peter";
+ firma.angestellte[3].nachname = "Jones";
+
+ //kurzform davon 
+ var firma = {
+    firmenname: "Credit Suisse", 
+    angestellte:[
+        { vorname:"John", nachname:"Doe" },
+        { vorname:"Anna", nachname:"Smith" },
+        { vorname:"Peter", nachname:"Jones" }
+    ]
+}
+//Serialisierung= umwandlung in string
+var auto = {
+    marke: "BMW", 
+    farbe: "schwarz", 
+    besitzer: {
+        vorname: "Hans", 
+        nachname: "Muster"
+    }
+};
+var serialized = JSON.stringify(auto);
+alert(serialized);
+//{"marke":"BMW","farbe":"schwarz","besitzer":{"vorname":"Hans","nachname":"Muster"}} 
+
+//Deserialisierung mit JSON.parse()
+    </script>
+</body>
+</html>
