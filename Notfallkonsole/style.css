@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    /* ersetzt inline block besser*/
+    background-color: black;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    border: 5px solid white;
+    text-align: center;
+    gap: 20px;
+    /*fügt zwischen boxen abstand ein*/
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+    border-radius: 20px;
+    /*rundet Ecken ab*/
+    margin-top: 20px;
+
+}
+
+.box.hover {
+    border-color: red;
+    color: red;
+
+}
+
+
+#boxen {
+    justify-content: space-evenly;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    justify-content: left;
+}

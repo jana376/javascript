@@ -1,0 +1,17 @@
+<html>
+<head>
+   <title>Event-Target</title>
+</head>
+<body>
+   <h1>Fokus</h1>
+
+   <input id="myInput" type="text">
+
+   <script>
+      function changeBackColor(e) {
+         e.target.style.background = "yellow";
+      }
+      document.getElementById("myInput").addEventListener("focus", changeBackColor);
+   </script>
+</body>
+</html>
